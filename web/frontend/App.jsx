@@ -26,6 +26,11 @@ export default function App() {
                   label: t("NavigationMenu.pageName"),
                   destination: "/pagename",
                 },
+                {
+                  // label: t("NavigationMenu.pageName"),
+                  label: '客户',
+                  destination: "/customer",
+                },
               ]}
             />
             <Routes pages={pages} />
