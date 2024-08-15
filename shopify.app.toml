@@ -3,7 +3,7 @@
 client_id = "c2ebf6652e743927b799411433d0faa4"
 name = "project-app2"
 handle = "project-app2"
-application_url = "https://alerts-qt-harold-zu.trycloudflare.com"
+application_url = "https://dean-terrorists-personalized-spine.trycloudflare.com"
 embedded = true
 
 [build]
@@ -17,9 +17,9 @@ scopes = "write_products"
 
 [auth]
 redirect_urls = [
-  "https://alerts-qt-harold-zu.trycloudflare.com/auth/callback",
-  "https://alerts-qt-harold-zu.trycloudflare.com/auth/shopify/callback",
-  "https://alerts-qt-harold-zu.trycloudflare.com/api/auth/callback"
+  "https://dean-terrorists-personalized-spine.trycloudflare.com/auth/callback",
+  "https://dean-terrorists-personalized-spine.trycloudflare.com/auth/shopify/callback",
+  "https://dean-terrorists-personalized-spine.trycloudflare.com/api/auth/callback"
 ]
 
 [webhooks]

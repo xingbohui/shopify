@@ -1,4 +1,4 @@
-import { Card, EmptyState, Page } from "@shopify/polaris";
+import { Card, EmptyState,Button, Page, LegacyCard } from "@shopify/polaris";
 import { Modal, TitleBar, useAppBridge } from "@shopify/app-bridge-react";
 import { useTranslation } from "react-i18next";
 import { notFoundImage } from "../assets";
@@ -18,14 +18,9 @@ export default function Customer() {
 
   return (
     <Page>
-      <button onClick={() => modalRef.current?.show()}>
-        Expand Your Reach
-      </button>
-      <TitleBar title="标题"></TitleBar>
-      <button variant="primary" onClick={handlePrimaryAction}>
-        点击
-      </button>
-      <button onClick={generateBlogPost}>Generate Blog Post</button>
+      <LegacyCard></LegacyCard>
+      <Button class="Polaris-Button" onClick={() => alert('Button clicked!')}>Example button</Button>
+
     </Page>
   );
 }
