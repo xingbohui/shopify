@@ -3,7 +3,7 @@
 client_id = "c2ebf6652e743927b799411433d0faa4"
 name = "project-app2"
 handle = "project-app2"
-application_url = "https://dean-terrorists-personalized-spine.trycloudflare.com"
+application_url = "https://identifies-advantage-western-considering.trycloudflare.com"
 embedded = true
 
 [build]
@@ -17,9 +17,9 @@ scopes = "write_products"
 
 [auth]
 redirect_urls = [
-  "https://dean-terrorists-personalized-spine.trycloudflare.com/auth/callback",
-  "https://dean-terrorists-personalized-spine.trycloudflare.com/auth/shopify/callback",
-  "https://dean-terrorists-personalized-spine.trycloudflare.com/api/auth/callback"
+  "https://identifies-advantage-western-considering.trycloudflare.com/auth/callback",
+  "https://identifies-advantage-western-considering.trycloudflare.com/auth/shopify/callback",
+  "https://identifies-advantage-western-considering.trycloudflare.com/api/auth/callback"
 ]
 
 [webhooks]

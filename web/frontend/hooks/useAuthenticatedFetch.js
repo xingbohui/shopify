@@ -25,6 +25,7 @@ export function useAuthenticatedFetch() {
   };
 }
 
+// 检测商店是否登录， 没有登录则打开登录界面
 function checkHeadersForReauthorization(headers, app) {
   if (headers.get("X-Shopify-API-Request-Failure-Reauthorize") === "1") {
     const authUrlHeader =

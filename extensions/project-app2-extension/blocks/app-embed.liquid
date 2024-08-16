@@ -15,7 +15,7 @@
     clip: rect(0 0 0 0);
     word-wrap: normal!important;
   }
-  
+
   @-webkit-keyframes rainbow {
     0% {border-color: hsl(0, 100%, 50%);}
     14% {border-color: hsl(30,100%,50%);}
@@ -59,12 +59,21 @@
   }
 </style>
 
+{{ block.settings.product.handle }}
+
 {% schema %}
 {
   "name": "Party",
   "target": "body",
   "stylesheet": "image-gallery.css",
   "javascript": "party-button.js",
-  "settings": []
+  "settings": [
+    {
+      "type": "product",
+      "id": "product",
+      "label": "Product",
+      "autofill": true
+    }
+  ]
 }
 {% endschema %}
