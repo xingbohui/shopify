@@ -1,11 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "../index.css";
-import { Head } from "./head";
+import {Point} from './point'
 
-const root = ReactDOM.createRoot(document.getElementById("head"));
+
+const root = ReactDOM.createRoot(document.getElementById("point"));
 root.render(
   <React.StrictMode>
-    <Head />
+    <Point />
   </React.StrictMode>
 );

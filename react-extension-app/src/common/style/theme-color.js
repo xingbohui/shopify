@@ -1,4 +1,8 @@
-export const themeColorBgClass = 'bg-lime-600'
-export const themeColorFillClass = 'fill-green-600'
-export const themeColorStrokeClass = 'stroke-green-600'
-export const themeColor = 'rgb(101 163 13)'
+// =======================绿色-600主题色 =======================
+const themeColorVal = 600;
+export const themeColorRgb = "rgb(101 163 13)";
+export const themeColorBgClass = `bg-lime-${themeColorVal}`;
+export const themeColorFillClass = `fill-green-${themeColorVal}`;
+export const themeColorStrokeClass = `stroke-green-${themeColorVal}`;
+export const themeColorTextClass = `text-green-${themeColorVal}`;
+

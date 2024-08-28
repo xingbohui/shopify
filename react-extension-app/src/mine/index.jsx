@@ -1,8 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import "./index.css";
+import "../index.css";
 import gift from "./common/svg/gift.svg";
-import chevionRight from "../common/svg/chevion-right.svg";
+import chevionRight from "../common/icon"
+import { themeColorTextClass } from "../common/style/theme-color";
 
 const App = () => {
   const list = [
@@ -35,12 +36,14 @@ const App = () => {
   ];
 
   return (
-    <div className="p-5 flex flex-col w-screen h-90 bg-yellow-50 gap-8 px-8 	">
+    <div className="p-5 flex flex-col w-screen h-90 bg-yellow-50 gap-8 px-8">
       <div className="flex flex-col items-center">
-        <span className="text-slate-500	 text-sm		">Hi, bohui</span>
+        <span className="text-slate-500	 text-sm">Hi, bohui</span>
         <div>
-          <span className="text-3xl	 font-semibold		">Your current points: </span>
-          <span className="text-3xl	 font-semibold		text-yellow-700	">1000</span>
+          <span className="text-3xl	font-semibold">Your current points: </span>
+          <span className={`text-3xl font-semibold ${themeColorTextClass}	`}>
+            1000
+          </span>
         </div>
       </div>
 
