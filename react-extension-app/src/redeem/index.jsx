@@ -1,11 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "../index.css";
-import { Mine } from "./mine";
+import {Redeem} from './redeem'
 
-const root = ReactDOM.createRoot(document.getElementById("mine"));
+
+const root = ReactDOM.createRoot(document.getElementById("redeem"));
 root.render(
   <React.StrictMode>
-    <Mine />
+    <Redeem />
   </React.StrictMode>
 );

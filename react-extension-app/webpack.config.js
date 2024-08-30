@@ -4,9 +4,13 @@ const path = require("path");
 module.exports = {
   mode: "production",
   entry: {
-    index: "./src/index.js",
-    point: "./src/points/index.jsx",
     head: "./src/head/index.jsx",
+    mine: "./src/mine/index.jsx",
+    point: "./src/point/index.jsx",
+    redeem: "./src/redeem/index.jsx",
+    referral: "./src/referral/index.jsx",
+    vipTiers: "./src/vip-tiers/index.jsx",
+    footer: "./src/footer/index.jsx",
   },
   output: {
     path: path.resolve(__dirname, "dist"), // 输出的目录
@@ -17,13 +21,21 @@ module.exports = {
     children: true,
     // 其他stats配置...
   },
-
+  resolve: {
+    alias: {
+      "@": path.resolve(__dirname, "src"),
+    },
+    extensions: ['.js', '.jsx'],
+  },
   module: {
     rules: [
       {
         test: /\.(js|jsx)$/,
         loader: "babel-loader",
         exclude: /node_modules/,
+        options: {
+          presets: ['@babel/preset-env', '@babel/preset-react']
+        }
       },
       {
         test: /\.css$/i,

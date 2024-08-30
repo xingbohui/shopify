@@ -1,13 +1,12 @@
 import React from "react";
 import {
-  themeColorTextClass,
-  themeColorBgClass,
+  themeColor600TextClass,
+  themeColor600BgClass,
 } from "../common/style/theme-color";
-import "../index.css";
 
 export const Head = () => {
   return (
-    <div className="p-5 flex flex-col justify-center gap-3 w-screen h-80 bg-center bg-cover bg-[url('https://shuyun.com/wp-content/themes/shuyun/statics/dist/img/footer_box.png')]">
+    <div className="p-10 flex flex-col justify-center gap-4 w-screen h-80 bg-center bg-cover bg-[url('https://shuyun.com/wp-content/themes/shuyun/statics/dist/img/footer_box.png')]">
       <span className="font-sans font-semibold text-white text-xl">
         ShuYun Rewards
       </span>
@@ -16,14 +15,14 @@ export const Head = () => {
         member benefits every time you shop. Many attractive rewards are waiting
         for you!
       </p>
-      <div className="flex flex-row gap-2">
+      <div className="flex flex-row gap-3">
         <button
-          className={`bg-amber-50 py-2 px-6 rounded-full  ${themeColorTextClass}`}
+          className={`bg-amber-50 py-2 px-6 rounded-full  ${themeColor600TextClass}`}
         >
           Earn points
         </button>
         <button
-          className={`${themeColorBgClass} py-2 px-6 rounded-full border-white	border text-white`}
+          className={`${themeColor600BgClass} py-2 px-6 rounded-full border-white	border text-white`}
         >
           Redeem points
         </button>

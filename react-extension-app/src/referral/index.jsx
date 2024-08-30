@@ -1,11 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "../index.css";
-import { Mine } from "./mine";
+import { Referral } from "./referral";
 
-const root = ReactDOM.createRoot(document.getElementById("mine"));
+const root = ReactDOM.createRoot(document.getElementById("referral"));
 root.render(
   <React.StrictMode>
-    <Mine />
+    <Referral />
   </React.StrictMode>
 );

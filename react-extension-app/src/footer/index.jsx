@@ -1,11 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "../index.css";
-import { Mine } from "./mine";
+import { Footer } from "./footer";
 
-const root = ReactDOM.createRoot(document.getElementById("mine"));
+const root = ReactDOM.createRoot(document.getElementById("footer"));
 root.render(
   <React.StrictMode>
-    <Mine />
+    <Footer />
   </React.StrictMode>
 );
