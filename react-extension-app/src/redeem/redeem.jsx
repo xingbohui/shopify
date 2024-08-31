@@ -1,5 +1,5 @@
 import React from "react";
-import { themeColor50BgClass } from "../common/style/theme-color";
+import { themeColorBgViceClass } from "../common/style/theme-color";
 import { listData, titleInfoData } from "./helper";
 import { CardInfo } from "../components/card-info";
 import { TitleInfo } from "../components/title-info";
@@ -7,7 +7,7 @@ import { TitleInfo } from "../components/title-info";
 export const Redeem = () => {
   return (
     <div
-      className={`py-10 flex flex-col w-screen h-90 gap-8 px-8 ${themeColor50BgClass}`}
+      className={`py-10 flex flex-col w-screen h-90 gap-8 px-8 ${themeColorBgViceClass}`}
     >
       <TitleInfo data={titleInfoData} />
 

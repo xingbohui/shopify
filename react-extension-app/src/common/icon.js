@@ -1,11 +1,12 @@
+import React from "react";
+
 /**
  * 公用图标icon
  * 详细地址：https://heroicons.com/
  */
 import {
-  themeColor600FillClass,
-  themeColor600StrokeClass,
-  themeColor600BgClass,
+  themeColorFillClass,
+  themeColorStrokeClass,
 } from "./style/theme-color";
 
 // 礼物
@@ -16,7 +17,7 @@ export const giftIcon = (
     viewBox="0 0 24 24"
     stroke-width="1.5"
     stroke="currentColor"
-    class={`size-6 ${themeColor600StrokeClass}`}
+    class={`size-6 stroke-green-600 ${themeColorStrokeClass}`}
   >
     <path
       stroke-linecap="round"
@@ -34,7 +35,7 @@ export const chevionRightIcon = (
     viewBox="0 0 24 24"
     stroke-width="1.5"
     stroke="currentColor"
-    class={`size-6 ${themeColor600StrokeClass}`}
+    class={`size-6 ${themeColorStrokeClass}`}
   >
     <path
       stroke-linecap="round"
@@ -51,7 +52,7 @@ export const sparklesIcon = (
     viewBox="0 0 24 24"
     stroke-width="1.5"
     // stroke="currentColor"
-    class={`${themeColor600FillClass} size-10 ${themeColor600StrokeClass}`}
+    class={`${themeColorFillClass} fill-teal-500 size-10 ${themeColorStrokeClass}`}
   >
     <path
       stroke-linecap="round"
@@ -69,7 +70,7 @@ export const currencyDollarIcon = (
     viewBox="0 0 24 24"
     stroke-width="1.5"
     stroke="currentColor"
-    class={`${themeColor600StrokeClass} size-6`}
+    class={`${themeColorStrokeClass} size-6`}
   >
     <path
       stroke-linecap="round"
@@ -87,7 +88,7 @@ export const userIcon = (
     viewBox="0 0 24 24"
     stroke-width="1.5"
     stroke="currentColor"
-    class={`${themeColor600StrokeClass} size-6`}
+    class={`${themeColorStrokeClass} size-6`}
   >
     <path
       stroke-linecap="round"
@@ -106,7 +107,7 @@ export const starIcon = (
     viewBox="0 0 24 24"
     stroke-width="1.5"
     stroke="currentColor"
-    class={`${themeColor600StrokeClass} size-6`}
+    class={`${themeColorStrokeClass}  size-6`}
   >
     <path
       stroke-linecap="round"

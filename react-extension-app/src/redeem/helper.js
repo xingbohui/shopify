@@ -1,4 +1,5 @@
 import { currencyDollarIcon } from "../common/icon";
+import {themeColorBgClass} from '../common/style/theme-color'
 
 export const listData = [
   {
@@ -7,6 +8,7 @@ export const listData = [
     icon: [currencyDollarIcon],
     key: "1",
     butText: "Redeem",
+    butBgColorClass: themeColorBgClass,
   },
   {
     name: "GET $10 OFF",
@@ -14,6 +16,7 @@ export const listData = [
     icon: [currencyDollarIcon],
     key: "2",
     butText: "Redeem",
+    butBgColorClass: themeColorBgClass,
   },
   {
     name: "GET $20 OFF",
@@ -21,6 +24,7 @@ export const listData = [
     icon: [currencyDollarIcon],
     key: "3",
     butText: "Redeem",
+    butBgColorClass: themeColorBgClass,
   },
   {
     name: "Free shipping coupon",
@@ -28,6 +32,7 @@ export const listData = [
     icon: [currencyDollarIcon],
     key: "4",
     butText: "Redeem",
+    butBgColorClass: themeColorBgClass,
   },
   
 ];

@@ -1,5 +1,5 @@
 import { giftIcon, sparklesIcon } from "../common/icon";
-import { themeColor600BgClass } from "../common/style/theme-color";
+import { themeColorBgClass } from "../common/style/theme-color";
 
 export const listData = [
   {
@@ -8,7 +8,7 @@ export const listData = [
     icon: [giftIcon],
     key: "1",
     butText: "Purchase",
-    butBgColorClass: themeColor600BgClass,
+    butBgColorClass: themeColorBgClass,
   },
   {
     name: "Happy birthday",
@@ -16,7 +16,7 @@ export const listData = [
     icon:[sparklesIcon],
     key: "2",
     butText: "Enter info",
-    butBgColorClass: themeColor600BgClass,
+    butBgColorClass: themeColorBgClass,
   },
   {
     name: "Complete an order",
@@ -24,7 +24,7 @@ export const listData = [
     icon: [sparklesIcon],
     key: "3",
     butText: "Purchase",
-    butBgColorClass: themeColor600BgClass,
+    butBgColorClass: themeColorBgClass,
   },
   {
     name: "Happy birthday",
@@ -32,7 +32,7 @@ export const listData = [
     icon: [giftIcon],
     key: "4",
     butText: "Enter info",
-    butBgColorClass: themeColor600BgClass,
+    butBgColorClass: themeColorBgClass,
   },
   {
     name: "Complete an order",
@@ -40,7 +40,7 @@ export const listData = [
     icon: [giftIcon],
     key: "5",
     butText: "Purchase",
-    butBgColorClass: themeColor600BgClass,
+    butBgColorClass: themeColorBgClass,
   },
   {
     name: "Happy birthday",
@@ -48,7 +48,7 @@ export const listData = [
     icon: [sparklesIcon],
     key: "6",
     butText: "Enter info",
-    butBgColorClass: themeColor600BgClass,
+    butBgColorClass: themeColorBgClass,
   },
   {
     name: "Complete an order",
@@ -56,7 +56,7 @@ export const listData = [
     icon: [giftIcon],
     key: "7",
     butText: "Purchase",
-    butBgColorClass: themeColor600BgClass,
+    butBgColorClass: themeColorBgClass,
   },
   {
     name: "Happy birthday",
@@ -64,7 +64,7 @@ export const listData = [
     icon: [sparklesIcon],
     key: "8",
     butText: "Enter info",
-    butBgColorClass: themeColor600BgClass,
+    butBgColorClass: themeColorBgClass,
   },
 ];
 

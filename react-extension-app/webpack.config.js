@@ -1,9 +1,14 @@
 const TerserPlugin = require("terser-webpack-plugin");
 const path = require("path");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const { HotModuleReplacementPlugin } = require("webpack");
+const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
+
 
 module.exports = {
-  mode: "production",
+  mode: "development",
   entry: {
+    // head: "./src/index.js",
     head: "./src/head/index.jsx",
     mine: "./src/mine/index.jsx",
     point: "./src/point/index.jsx",
@@ -13,7 +18,7 @@ module.exports = {
     footer: "./src/footer/index.jsx",
   },
   output: {
-    path: path.resolve(__dirname, "dist"), // 输出的目录
+    path: path.resolve(__dirname, "../extensions/project-app2-extension/assets"), // 输出的目录
     filename: "[name].js", // 主文件输出的文件名，[name]是入口点的名称
     chunkFilename: "[name].chunk.js", // 代码块输出的文件名
   },
@@ -25,8 +30,26 @@ module.exports = {
     alias: {
       "@": path.resolve(__dirname, "src"),
     },
-    extensions: ['.js', '.jsx'],
+    extensions: [".js", ".jsx"],
   },
+  devServer: {
+    static: {
+      directory: path.join(__dirname, "dist"), // 指定 dist 文件夹作为静态资源的根目录
+    },
+    compress: true, // 启用 gzip 压缩
+    port: 9000, // 指定端口号
+    open: true, // 自动打开浏览器
+    historyApiFallback: true, // 单页应用支持
+    // 其他配置...
+  },
+
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: "./public/index.html",
+    }),
+    new HotModuleReplacementPlugin(),
+    new ReactRefreshWebpackPlugin()
+  ],
   module: {
     rules: [
       {
@@ -34,8 +57,8 @@ module.exports = {
         loader: "babel-loader",
         exclude: /node_modules/,
         options: {
-          presets: ['@babel/preset-env', '@babel/preset-react']
-        }
+          presets: ["@babel/preset-env", "@babel/preset-react"],
+        },
       },
       {
         test: /\.css$/i,

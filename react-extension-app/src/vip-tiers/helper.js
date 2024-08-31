@@ -7,7 +7,6 @@ export const listData = [
     icon: [starIcon],
     key: "1",
     widthClass: "w-80",
-    rgTpText: "Current tier",
   },
   {
     name: "bon test",
@@ -22,6 +21,7 @@ export const listData = [
     icon: [starIcon, starIcon, starIcon],
     key: "3",
     widthClass: "w-80",
+    rgTpText: "Current tier",
   },
   {
     name: "Gold",

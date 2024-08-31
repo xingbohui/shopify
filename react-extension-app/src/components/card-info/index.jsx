@@ -1,7 +1,7 @@
 import React from "react";
 import {
   bgWhiteClass,
-  themeColor600BgClass,
+  themeColorBgClass,
   textWhiteClass,
 } from "../../common/style/theme-color";
 
@@ -15,7 +15,7 @@ export const CardInfo = (props) => {
     >
       {item.rgTpText && (
         <div
-          className={`${themeColor600BgClass} ${textWhiteClass} text-xs	 px-2 py-1 absolute right-0.5 top-0`}
+          className={`${themeColorBgClass} ${textWhiteClass} text-xs	 px-2 py-1 absolute right-0.5 top-0`}
         >
           <span>{item.rgTpText}</span>
         </div>
@@ -28,7 +28,7 @@ export const CardInfo = (props) => {
 
       {item.butText && (
         <button
-          className={`${item.butBgColorClass} py-2 px-6 rounded-full text-white`}
+          className={`${item.butBgColorClass}  py-2 px-6 rounded-full text-white`}
         >
           {item.butText}
         </button>

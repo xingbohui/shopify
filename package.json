@@ -9,7 +9,7 @@
     "dev": "shopify app dev",
     "info": "shopify app info",
     "generate": "shopify app generate",
-    "deploy": "shopify app deploy"
+    "dep": "shopify app deploy"
   },
   "dependencies": {},
   "author": "xingbohui",
