@@ -2,23 +2,25 @@ const TerserPlugin = require("terser-webpack-plugin");
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { HotModuleReplacementPlugin } = require("webpack");
-const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
+const ReactRefreshWebpackPlugin = require("@pmmmwh/react-refresh-webpack-plugin");
 
-
+const isProduction = process.env.NODE_ENV === "production";
 module.exports = {
-  mode: "development",
-  entry: {
-    // head: "./src/index.js",
-    head: "./src/head/index.jsx",
-    mine: "./src/mine/index.jsx",
-    point: "./src/point/index.jsx",
-    redeem: "./src/redeem/index.jsx",
-    referral: "./src/referral/index.jsx",
-    vipTiers: "./src/vip-tiers/index.jsx",
-    footer: "./src/footer/index.jsx",
-  },
+  entry: isProduction
+    ? {
+        head: "./src/head/index.jsx",
+        mine: "./src/mine/index.jsx",
+        point: "./src/point/index.jsx",
+        redeem: "./src/redeem/index.jsx",
+        referral: "./src/referral/index.jsx",
+        vipTiers: "./src/vip-tiers/index.jsx",
+        footer: "./src/footer/index.jsx",
+      }
+    : {
+        index: "./src/index.js",
+      },
   output: {
-    path: path.resolve(__dirname, "../extensions/project-app2-extension/assets"), // 输出的目录
+    path: path.resolve(__dirname, "dist"), // 输出的目录
     filename: "[name].js", // 主文件输出的文件名，[name]是入口点的名称
     chunkFilename: "[name].chunk.js", // 代码块输出的文件名
   },
@@ -48,7 +50,7 @@ module.exports = {
       template: "./public/index.html",
     }),
     new HotModuleReplacementPlugin(),
-    new ReactRefreshWebpackPlugin()
+    new ReactRefreshWebpackPlugin(),
   ],
   module: {
     rules: [

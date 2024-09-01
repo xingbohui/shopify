@@ -4,13 +4,13 @@ export const listData = [
   {
     name: "You will get 10% Off Discount",
     icon: [userIcon],
-    key: "1",
+    key: 1,
     widthClass: 'w-80' 
   },
   {
     name: "They will get 10% Off Discount",
     icon: [userIcon],
-    key: "2",
+    key: 2,
     widthClass: 'w-80' 
   },
 ];

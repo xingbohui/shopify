@@ -1,70 +1,66 @@
-import { giftIcon, sparklesIcon } from "../common/icon";
-import { themeColorBgClass } from "../common/style/theme-color";
+import { giftIcon, sparklesIcon, shareIcon } from "../common/icon";
 
 export const listData = [
   {
     name: "Complete an order",
     tips: "Earn 10 points for every 1USD",
     icon: [giftIcon],
-    key: "1",
+    key: 1,
     butText: "Purchase",
-    butBgColorClass: themeColorBgClass,
-  },
-  {
-    name: "Happy birthday",
-    tips: "200 BON",
-    icon:[sparklesIcon],
-    key: "2",
-    butText: "Enter info",
-    butBgColorClass: themeColorBgClass,
-  },
-  {
-    name: "Complete an order",
-    tips: "Earn 10 points for every 1USD",
-    icon: [sparklesIcon],
-    key: "3",
-    butText: "Purchase",
-    butBgColorClass: themeColorBgClass,
-  },
-  {
-    name: "Happy birthday",
-    tips: "200 BON",
-    icon: [giftIcon],
-    key: "4",
-    butText: "Enter info",
-    butBgColorClass: themeColorBgClass,
-  },
-  {
-    name: "Complete an order",
-    tips: "Earn 10 points for every 1USD",
-    icon: [giftIcon],
-    key: "5",
-    butText: "Purchase",
-    butBgColorClass: themeColorBgClass,
+    type: "nav",
+    navLink: "/collections/all",
   },
   {
     name: "Happy birthday",
     tips: "200 BON",
     icon: [sparklesIcon],
-    key: "6",
+    key: 2,
     butText: "Enter info",
-    butBgColorClass: themeColorBgClass,
+  },
+  {
+    name: "Share on Facebook",
+    tips: "50 BON",
+    icon: [shareIcon],
+    key: 3,
+    butText: "Take me there",
+    type: "open",
+    navLink:
+      "https://www.facebook.com/login/?next=https%3A%2F%2Fwww.facebook.com%2Fgroups%2F190036098345",
+  },
+  {
+    name: "Happy birthday",
+    tips: "200 BON",
+    icon: [giftIcon],
+    key: 4,
+    butText: "Enter info",
   },
   {
     name: "Complete an order",
     tips: "Earn 10 points for every 1USD",
     icon: [giftIcon],
-    key: "7",
+    key: 5,
     butText: "Purchase",
-    butBgColorClass: themeColorBgClass,
   },
   {
     name: "Happy birthday",
     tips: "200 BON",
     icon: [sparklesIcon],
-    key: "8",
+    key: 6,
     butText: "Enter info",
-    butBgColorClass: themeColorBgClass,
+  },
+  {
+    name: "Complete an order",
+    tips: "Earn 10 points for every 1USD",
+    icon: [giftIcon],
+    key: 7,
+    butText: "Purchase",
+  },
+  {
+    name: "Happy birthday",
+    tips: "200 BON",
+    icon: [sparklesIcon],
+    key: 8,
+    butText: "Enter info",
   },
 ];
 

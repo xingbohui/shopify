@@ -4,14 +4,49 @@
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+:root {
+  --color-500: theme("colors.teal.500");
+  --color-50: theme("colors.teal.50");
+}
+
+.themeColorBgClass {
+  background-color: var(--color-500);
+}
+
+.themeColorBgViceClass {
+  background-color: var(--color-50);
+}
+.themeColorFillClass {
+  fill: var(--color-500);
+}
+.themeColorStrokeClass {
+  stroke: var(--color-500);
+}
+.themeColorTextClass {
+  color: var(--color-500);
+}
+
+.themeColorBorderClass {
+  border-color: var(--color-500);
+}
+
+@layer components {
+  /* =======================白色 ======================= */
+  .bgWhiteClass {
+    @apply bg-white;
+  }
+  .textWhiteClass {
+    @apply text-white;
+  }
 }

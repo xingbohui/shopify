@@ -1,7 +1,5 @@
 import React from "react";
-import {
-  themeColorTextClass,
-} from "../common/style/theme-color";
+
 
 export const Head = () => {
   return (
@@ -16,7 +14,7 @@ export const Head = () => {
       </p>
       <div className="flex flex-row gap-3">
         <button
-          className={`bg-amber-50 py-2 px-6 rounded-full text-teal-600 ${themeColorTextClass}`}
+          className={`bg-amber-50 py-2 px-6 rounded-full text-teal-600 themeColorTextClass`}
         >
           Earn points
         </button>

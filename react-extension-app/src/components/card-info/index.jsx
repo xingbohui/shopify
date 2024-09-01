@@ -1,21 +1,24 @@
 import React from "react";
-import {
-  bgWhiteClass,
-  themeColorBgClass,
-  textWhiteClass,
-} from "../../common/style/theme-color";
 
 export const CardInfo = (props) => {
   const { item } = props;
+
+  const navToProductPage = () => {
+    if (item.type === "open") {
+      return window.open(item.navLink);
+    }
+    window.location.href = item.navLink;
+  };
+
   return (
     <div
-      className={`${bgWhiteClass} text-center relative justify-between ${
+      className={`bgWhiteClass text-center relative justify-between ${
         item.widthClass ? item.widthClass : "w-60"
       } h-50 flex flex-col gap-2 items-center rounded-lg px-3 py-5 border-slate-200	border`}
     >
       {item.rgTpText && (
         <div
-          className={`${themeColorBgClass} ${textWhiteClass} text-xs	 px-2 py-1 absolute right-0.5 top-0`}
+          className={`themeColorBgClass textWhiteClass text-xs px-2 py-1 absolute right-0.5 top-0`}
         >
           <span>{item.rgTpText}</span>
         </div>
@@ -28,7 +31,8 @@ export const CardInfo = (props) => {
 
       {item.butText && (
         <button
-          className={`${item.butBgColorClass}  py-2 px-6 rounded-full text-white`}
+          onClick={navToProductPage}
+          className={`themeColorBgClass py-2 px-6 rounded-full text-white`}
         >
           {item.butText}
         </button>
