@@ -1,54 +1,75 @@
-import { Card, Page, Layout, TextContainer, Text } from "@shopify/polaris";
-import { TitleBar } from "@shopify/app-bridge-react";
-import { useTranslation } from "react-i18next";
+import { MediaCard } from "@shopify/polaris";
+import React from "react";
 
-export default function PageName() {
-  const { t } = useTranslation();
+export default function MediaCardExample() {
+  const listData = [
+    {
+      title: "Earn points",
+      description:
+        "Set up how your customers can earn points when they interact with your brand",
+      image:
+        "https://shuyun.com/wp-content/uploads/2021/10/2021102812341253.png",
+    },
+    {
+      title: "Redeem points",
+      description:
+        "Set up how your customers can get rewards in exchange for points",
+      image:
+        "https://shuyun.com/wp-content/uploads/2021/10/2021110311344682.png",
+    },
+    {
+      title: "Referral program",
+      description:
+        "Broaden your clientele and elevate the awareness of your brand.",
+      image:
+        "https://shuyun.com/wp-content/uploads/2021/10/2021110311324954.png",
+    },
+    {
+      title: "VIP Tiers",
+      description: "Offer exclusive rewards for your most loyal customers",
+      image:
+        "https://shuyun.com/wp-content/uploads/2021/11/2021110412271656.png",
+    },
+  ];
+
   return (
-    <Page>
-      <TitleBar
-        title={t("PageName.title")}
-        primaryAction={{
-          content: t("PageName.primaryAction"),
-          onAction: () => console.log("Primary action"),
-        }}
-        secondaryActions={[
-          {
-            content: t("PageName.secondaryAction"),
-            onAction: () => console.log("Secondary action"),
-          },
-        ]}
-      />
-      <Layout>
-        <Layout.Section>
-          <Card sectioned>
-            <Text variant="headingMd" as="h2">
-              {t("PageName.heading")}
-            </Text>
-            <TextContainer>
-              <p>{t("PageName.body")}</p>
-            </TextContainer>
-          </Card>
-          <Card sectioned>
-            <Text variant="headingMd" as="h2">
-              {t("PageName.heading")}
-            </Text>
-            <TextContainer>
-              <p>{t("PageName.body")}</p>
-            </TextContainer>
-          </Card>
-        </Layout.Section>
-        <Layout.Section secondary>
-          <Card sectioned>
-            <Text variant="headingMd" as="h2">
-              {t("PageName.heading")}
-            </Text>
-            <TextContainer>
-              <p>{t("PageName.body")}</p>
-            </TextContainer>
-          </Card>
-        </Layout.Section>
-      </Layout>
-    </Page>
+    <div
+      style={{
+        display: "flex",
+        flexWrap: "wrap",
+        gap: "10px",
+        justifyContent: "center",
+        alignItems: "center",
+        padding: 20,
+      }}
+    >
+      {listData.map((item) => {
+        return (
+          <div key={item.title} style={{ width: "45%" }}>
+            <MediaCard
+              title={item.title}
+              primaryAction={{
+                content: "set up",
+                onAction: () => {},
+              }}
+              description={item.description}
+              popoverActions={[{ content: "Dismiss", onAction: () => {} }]}
+            >
+              <img
+                alt=""
+                width="80%"
+                height="60%"
+                style={{
+                  textAlign: "center",
+                  objectFit: "cover",
+                  objectPosition: "center",
+                }}
+                src={item.image}
+              />
+            </MediaCard>
+          </div>
+        );
+      })}
+    </div>
   );
 }

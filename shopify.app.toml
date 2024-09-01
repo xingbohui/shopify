@@ -3,7 +3,7 @@
 client_id = "c2ebf6652e743927b799411433d0faa4"
 name = "project-app2"
 handle = "project-app2"
-application_url = "https://harold-lowest-wit-times.trycloudflare.com"
+application_url = "https://vaccine-fraud-lead-meyer.trycloudflare.com"
 embedded = true
 
 [build]
@@ -17,9 +17,9 @@ scopes = "write_products"
 
 [auth]
 redirect_urls = [
-  "https://harold-lowest-wit-times.trycloudflare.com/auth/callback",
-  "https://harold-lowest-wit-times.trycloudflare.com/auth/shopify/callback",
-  "https://harold-lowest-wit-times.trycloudflare.com/api/auth/callback"
+  "https://vaccine-fraud-lead-meyer.trycloudflare.com/auth/callback",
+  "https://vaccine-fraud-lead-meyer.trycloudflare.com/auth/shopify/callback",
+  "https://vaccine-fraud-lead-meyer.trycloudflare.com/api/auth/callback"
 ]
 
 [webhooks]

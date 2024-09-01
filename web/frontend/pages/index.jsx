@@ -1,93 +1,38 @@
-import {
-  Card,
-  Page,
-  Layout,
-  TextContainer,
-  Image,
-  Stack,
-  Link,
-  Text,
-} from "@shopify/polaris";
-import { TitleBar } from "@shopify/app-bridge-react";
-import { useTranslation, Trans } from "react-i18next";
+import { Link, AccountConnection } from "@shopify/polaris";
+import { useState, useCallback } from "react";
 
-import { trophyImage } from "../assets";
+export default function AccountConnectionExample() {
+  const [connected, setConnected] = useState(false);
+  const accountName = connected ? "Function Introduction" : "";
 
-import { ProductsCard } from "../components";
+  const handleAction = useCallback(() => {
+    setConnected((connected) => !connected);
+  }, []);
 
-export default function HomePage() {
-  const { t } = useTranslation();
+  const buttonText = connected ? "Disconnect" : "Connect";
+  const details = connected
+    ? "We will provide comprehensive management of your users, including membership levels, membership points, earning points, redeeming points for gifts, membership management, loyalty programs, page decoration, and more."
+    : "Spack";
+  const terms = connected ? null : (
+    <p>
+      Provide the brand's online store with the ability to expand its membership
+      loyalty management.
+    </p>
+  );
+
   return (
-    <Page narrowWidth>
-      <TitleBar title={t("HomePage.title")} primaryAction={null} />
-      <Layout>
-        <Layout.Section>
-          <Card sectioned>
-            <Stack
-              wrap={false}
-              spacing="extraTight"
-              distribution="trailing"
-              alignment="center"
-            >
-              <Stack.Item fill>
-                <TextContainer spacing="loose">
-                  <Text as="h2" variant="headingMd">
-                    {t("HomePage.heading")}
-                  </Text>
-                  <p>
-                    <Trans
-                      i18nKey="HomePage.yourAppIsReadyToExplore"
-                      components={{
-                        PolarisLink: (
-                          <Link url="https://polaris.shopify.com/" external />
-                        ),
-                        AdminApiLink: (
-                          <Link
-                            url="https://shopify.dev/api/admin-graphql"
-                            external
-                          />
-                        ),
-                        AppBridgeLink: (
-                          <Link
-                            url="https://shopify.dev/apps/tools/app-bridge"
-                            external
-                          />
-                        ),
-                      }}
-                    />
-                  </p>
-                  <p>{t("HomePage.startPopulatingYourApp")}</p>
-                  <p>
-                    <Trans
-                      i18nKey="HomePage.learnMore"
-                      components={{
-                        ShopifyTutorialLink: (
-                          <Link
-                            url="https://shopify.dev/apps/getting-started/add-functionality"
-                            external
-                          />
-                        ),
-                      }}
-                    />
-                  </p>
-                </TextContainer>
-              </Stack.Item>
-              <Stack.Item>
-                <div style={{ padding: "0 20px" }}>
-                  <Image
-                    source={trophyImage}
-                    alt={t("HomePage.trophyAltText")}
-                    width={120}
-                  />
-                </div>
-              </Stack.Item>
-            </Stack>
-          </Card>
-        </Layout.Section>
-        <Layout.Section>
-          <ProductsCard />
-        </Layout.Section>
-      </Layout>
-    </Page>
+    <div style={{ padding: "24px" }}>
+      <AccountConnection
+        accountName={accountName}
+        connected={connected}
+        title="ShuYun Loyalty"
+        action={{
+          content: buttonText,
+          onAction: handleAction,
+        }}
+        details={details}
+        termsOfService={terms}
+      />
+    </div>
   );
 }

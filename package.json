@@ -8,8 +8,9 @@
     "build": "shopify app build",
     "dev": "shopify app dev",
     "info": "shopify app info",
-    "generate": "shopify app generate",
-    "dep": "shopify app deploy"
+    "gen": "shopify app generate extension",
+    "dep": "shopify app deploy",
+    "hk": "shopify app deploy heroku"
   },
   "dependencies": {},
   "author": "xingbohui",

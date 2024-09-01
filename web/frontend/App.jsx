@@ -24,12 +24,22 @@ export default function App() {
               navigationLinks={[
                 {
                   label: t("NavigationMenu.pageName"),
+                  destination: "/index",
+                },
+                {
+                  // label: t("NavigationMenu.pageName"),
+                  label: 'Point programs',
                   destination: "/pagename",
                 },
                 {
                   // label: t("NavigationMenu.pageName"),
-                  label: '客户',
+                  label: 'Customer data',
                   destination: "/customer",
+                },
+                {
+                  // label: t("NavigationMenu.pageName"),
+                  label: 'order data',
+                  destination: "/order",
                 },
               ]}
             />
