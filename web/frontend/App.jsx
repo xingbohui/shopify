@@ -23,13 +23,9 @@ export default function App() {
             <NavigationMenu
               navigationLinks={[
                 {
-                  label: t("NavigationMenu.pageName"),
-                  destination: "/index",
-                },
-                {
                   // label: t("NavigationMenu.pageName"),
                   label: 'Point programs',
-                  destination: "/pagename",
+                  destination: "/point",
                 },
                 {
                   // label: t("NavigationMenu.pageName"),

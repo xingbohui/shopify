@@ -8,6 +8,7 @@ export const listData = [
     key: 1,
     butText: "Purchase",
     type: "nav",
+    point: 10,
     navLink: "/collections/all",
   },
   {
@@ -15,6 +16,7 @@ export const listData = [
     tips: "200 BON",
     icon: [sparklesIcon],
     key: 2,
+    point: 200,
     butText: "Enter info",
   },
   {
@@ -24,6 +26,7 @@ export const listData = [
     key: 3,
     butText: "Take me there",
     type: "open",
+    point: 50,
     navLink:
       "https://www.facebook.com/login/?next=https%3A%2F%2Fwww.facebook.com%2Fgroups%2F190036098345",
   },
@@ -32,6 +35,7 @@ export const listData = [
     tips: "200 BON",
     icon: [giftIcon],
     key: 4,
+    point: 200,
     butText: "Enter info",
   },
   {

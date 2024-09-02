@@ -1,5 +1,6 @@
 import React from "react";
 import { chevionRightIcon } from "../common/icon";
+import { currPoint } from "../common/helper";
 import { listData } from "./helper";
 
 
@@ -13,7 +14,7 @@ export const Mine = () => {
         <div>
           <span className="text-3xl	font-semibold">Your current points: </span>
           <span className={`text-3xl font-semibold themeColorTextClass`}>
-            1000
+            {window.localStorage.getItem('currPoint') || 1000}
           </span>
         </div>
       </div>

@@ -1,9 +1,11 @@
 import React from "react";
+import { addPoint } from "../../common/helper";
 
 export const CardInfo = (props) => {
   const { item } = props;
 
   const navToProductPage = () => {
+    addPoint(item.point);
     if (item.type === "open") {
       return window.open(item.navLink);
     }
