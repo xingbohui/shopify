@@ -1,8 +1,6 @@
 import React from "react";
-import { chevionRightIcon } from "../common/icon";
-import { currPoint } from "../common/helper";
+import { CardListInfo } from "../components/card-list-info";
 import { listData } from "./helper";
-
 
 export const Mine = () => {
   return (
@@ -14,25 +12,14 @@ export const Mine = () => {
         <div>
           <span className="text-3xl	font-semibold">Your current points: </span>
           <span className={`text-3xl font-semibold themeColorTextClass`}>
-            {window.localStorage.getItem('currPoint') || 1000}
+            {window.localStorage.getItem("currPoint") || 1000}
           </span>
         </div>
       </div>
 
       <div className="flex flex-col items-cente gap-16 ">
         {listData.map((m) => {
-          return (
-            <div
-              key={m.key}
-              className="flex flex-row justify-between items-center rounded-lg bg-white p-4 h-28"
-            >
-              <div className="flex flex-row gap-2 items-center 	">
-                {m.icon}
-                <span className="font-sans font-semibold">{m.name}</span>
-              </div>
-              {chevionRightIcon}
-            </div>
-          );
+          return <CardListInfo item={m} rowKey={m.key} hgClass="h-28" />;
         })}
       </div>
     </div>

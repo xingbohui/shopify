@@ -2,21 +2,23 @@ import React from "react";
 import { addPoint } from "../../common/helper";
 
 export const CardInfo = (props) => {
-  const { item } = props;
+  const { item, isRowClass, widthClass, isHidBorder } = props;
 
   const navToProductPage = () => {
     addPoint(item.point);
     if (item.type === "open") {
       return window.open(item.navLink);
     }
-    window.location.href = item.navLink;
+    item.navLink && (window.location.href = item.navLink);
   };
 
   return (
     <div
       className={`bgWhiteClass text-center relative justify-between ${
-        item.widthClass ? item.widthClass : "w-60"
-      } h-50 flex flex-col gap-2 items-center rounded-lg px-3 py-5 border-slate-200	border`}
+        widthClass ? widthClass : "w-60"
+      } ${isHidBorder ? "" : "border"} ${
+        isRowClass ? isRowClass : "flex-col"
+      } h-50 flex  gap-2 items-center rounded-lg px-3 py-5 border-slate-200`}
     >
       {item.rgTpText && (
         <div
@@ -26,11 +28,20 @@ export const CardInfo = (props) => {
         </div>
       )}
 
-      <div className="flex flex-row">{item.icon?.map((m) => m)}</div>
+      <div className={`flex flex-col items-center`}>
+        {item.icon?.length > 0 && (
+          <div className="flex flex-row">{item.icon?.map((m) => m)}</div>
+        )}
 
-      <span className="font-sans font-semibold">{item.name}</span>
-      {item.tips && <span className="text-slate-400">{item.tips}</span>}
-
+        <div
+          className={`flex flex-col ${
+            isRowClass ? "items-start" : "items-center"
+          }`}
+        >
+          <span className="font-sans font-semibold">{item.name}</span>
+          {item.tips && <span className="text-slate-400">{item.tips}</span>}
+        </div>
+      </div>
       {item.butText && (
         <button
           onClick={navToProductPage}

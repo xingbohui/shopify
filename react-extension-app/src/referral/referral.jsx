@@ -9,7 +9,7 @@ export const Referral = () => {
       <TitleInfo data={titleInfoData} />
       <div className="flex flex-row items-cente gap-8 flex-wrap justify-center">
         {listData.map((m) => {
-          return <CardInfo rowKey={m.key} item={m} />;
+          return <CardInfo rowKey={m.key} item={m} widthClass='w-80' />;
         })}
       </div>
     </div>

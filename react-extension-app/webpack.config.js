@@ -20,7 +20,7 @@ module.exports = {
         index: "./src/index.js",
       },
   output: {
-    path: path.resolve(__dirname, "dist"), // 输出的目录
+    path: path.resolve(__dirname, "../extensions/project-app2-extension/assets"), // 输出的目录
     filename: "[name].js", // 主文件输出的文件名，[name]是入口点的名称
     chunkFilename: "[name].chunk.js", // 代码块输出的文件名
   },

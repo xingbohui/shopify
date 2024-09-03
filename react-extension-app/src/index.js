@@ -7,11 +7,13 @@ import { Redeem } from "./redeem/redeem";
 import { Referral } from "./referral/referral";
 import { VIPTiers } from "./vip-tiers/vip-tiers";
 import { Footer } from "./footer/footer";
+import { PartyButton } from "./party-button/party-button";
 import "./index.css";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
+    <PartyButton />
     <Head />
     <Mine />
     <Point />
