@@ -1,10 +1,13 @@
 import React, { useState } from "react";
+import { observer } from "mobx-react";
 import { CardListInfo } from "../components/card-list-info";
 import { CardInfo } from "../components/card-info";
 import { listData } from "./helper";
+import { commonStore } from "../store";
 
-export const Mine = () => {
+export const Mine = observer(() => {
   const [selectedInfo, setSelectedInfo] = useState("");
+  const { points } = commonStore;
   const onOption = (item) => {
     setSelectedInfo(!selectedInfo ? item : "");
   };
@@ -18,7 +21,7 @@ export const Mine = () => {
         <div>
           <span className="text-3xl	font-semibold">Your current points: </span>
           <span className={`text-3xl font-semibold themeColorTextClass`}>
-            {window.localStorage.getItem("currPoint") || 1000}
+            {points}
           </span>
         </div>
       </div>
@@ -46,4 +49,4 @@ export const Mine = () => {
       </div>
     </div>
   );
-};
+});

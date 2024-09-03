@@ -9,9 +9,11 @@ export const CardInfo = (props) => {
     widthClass,
     isHidBorder,
     onCustomJump,
+    updateOpint
   } = props;
 
   const navToProductPage = (item) => {
+    updateOpint(item)
     item.isCutOpint ? cutPoint(item.point) : addPoint(item.point);
 
     if (isCustomJump) {
