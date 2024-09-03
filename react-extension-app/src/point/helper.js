@@ -13,7 +13,7 @@ export const listData = [
   },
   {
     name: "Happy birthday",
-    tips: "200 BON",
+    tips: "200 points",
     icon: [sparklesIcon],
     key: 2,
     point: 200,
@@ -21,17 +21,18 @@ export const listData = [
   },
   {
     name: "Share on Facebook",
-    tips: "50 BON",
+    tips: "50 points",
     icon: [shareIcon],
     key: 3,
+    point: 50,
     butText: "Take me there",
-    type: "open",
+    type: "nav",
     navLink:
       "https://www.facebook.com/login/?next=https%3A%2F%2Fwww.facebook.com%2Fgroups%2F190036098345",
   },
   {
     name: "Happy birthday",
-    tips: "200 BON",
+    tips: "200 points",
     icon: [giftIcon],
     key: 4,
     point: 200,
@@ -46,7 +47,7 @@ export const listData = [
   },
   {
     name: "Happy birthday",
-    tips: "200 BON",
+    tips: "200 points",
     icon: [sparklesIcon],
     key: 6,
     butText: "Enter info",
@@ -60,7 +61,7 @@ export const listData = [
   },
   {
     name: "Happy birthday",
-    tips: "200 BON",
+    tips: "200 points",
     icon: [sparklesIcon],
     key: 8,
     butText: "Enter info",

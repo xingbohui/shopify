@@ -7,7 +7,7 @@ export const Head = () => {
       <span className="font-sans font-semibold text-white text-xl">
         ShuYun Rewards
       </span>
-      <p className="text-slate-100 w-90">
+      <p className="text-slate-100 w-96">
         Become a member of our loyalty program and gain access to exclusive
         member benefits every time you shop. Many attractive rewards are waiting
         for you!

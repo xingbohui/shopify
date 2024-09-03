@@ -22,11 +22,11 @@ export default function App() {
           <QueryProvider>
             <NavigationMenu
               navigationLinks={[
-                {
-                  // label: t("NavigationMenu.pageName"),
-                  label: 'Point programs',
-                  destination: "/point",
-                },
+                // {
+                //   // label: t("NavigationMenu.pageName"),
+                //   label: 'Point programs',
+                //   destination: "/point",
+                // },
                 {
                   // label: t("NavigationMenu.pageName"),
                   label: 'Customer data',

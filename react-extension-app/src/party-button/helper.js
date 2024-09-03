@@ -37,14 +37,14 @@ export const subListData = [
   },
   {
     name: "Happy birthday",
-    tips: "200 BON",
+    tips: "200 points",
     key: 2,
     point: 200,
     butText: "Enter info",
   },
   {
     name: "Share on Facebook",
-    tips: "50 BON",
+    tips: "50 points",
     key: 3,
     butText: "Take there",
     type: "open",
@@ -53,7 +53,7 @@ export const subListData = [
   },
   {
     name: "Happy birthday",
-    tips: "200 BON",
+    tips: "200 points",
     key: 4,
     point: 200,
     butText: "Enter info",
@@ -66,7 +66,7 @@ export const subListData = [
   },
   {
     name: "Happy birthday",
-    tips: "200 BON",
+    tips: "200 points",
     key: 6,
     butText: "Enter info",
   },
@@ -78,7 +78,7 @@ export const subListData = [
   },
   {
     name: "Happy birthday",
-    tips: "200 BON",
+    tips: "200 points",
     key: 8,
     butText: "Enter info",
   },

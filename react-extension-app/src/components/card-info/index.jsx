@@ -1,11 +1,24 @@
 import React from "react";
-import { addPoint } from "../../common/helper";
+import { addPoint, cutPoint } from "../../common/helper";
 
 export const CardInfo = (props) => {
-  const { item, isRowClass, widthClass, isHidBorder } = props;
+  const {
+    item,
+    isCustomJump,
+    isRowClass,
+    widthClass,
+    isHidBorder,
+    onCustomJump,
+  } = props;
 
-  const navToProductPage = () => {
-    addPoint(item.point);
+  const navToProductPage = (item) => {
+    item.isCutOpint ? cutPoint(item.point) : addPoint(item.point);
+
+    if (isCustomJump) {
+      onCustomJump(item);
+      return;
+    }
+
     if (item.type === "open") {
       return window.open(item.navLink);
     }
@@ -18,7 +31,7 @@ export const CardInfo = (props) => {
         widthClass ? widthClass : "w-60"
       } ${isHidBorder ? "" : "border"} ${
         isRowClass ? isRowClass : "flex-col"
-      } h-50 flex  gap-2 items-center rounded-lg px-3 py-5 border-slate-200`}
+      } flex h-52 gap-2 items-center rounded-lg px-3 py-5 border-slate-200`}
     >
       {item.rgTpText && (
         <div
@@ -39,12 +52,15 @@ export const CardInfo = (props) => {
           }`}
         >
           <span className="font-sans font-semibold">{item.name}</span>
+          {item.code && (
+            <span className="themeColorTextClass">{item.code}</span>
+          )}
           {item.tips && <span className="text-slate-400">{item.tips}</span>}
         </div>
       </div>
       {item.butText && (
         <button
-          onClick={navToProductPage}
+          onClick={() => navToProductPage(item)}
           className={`themeColorBgClass py-2 px-6 rounded-full text-white`}
         >
           {item.butText}

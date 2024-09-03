@@ -8,3 +8,8 @@ export const addPoint = (num) => {
       Number(newPoint || currPoint) + num
     );
 };
+
+export const cutPoint = (num) => {
+  const newPoint = window.localStorage.getItem("currPoint");
+  num && window.localStorage.setItem("currPoint", Number(newPoint) - num);
+};

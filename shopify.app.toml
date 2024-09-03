@@ -3,7 +3,7 @@
 client_id = "c2ebf6652e743927b799411433d0faa4"
 name = "project-app2"
 handle = "project-app2"
-application_url = "https://barbara-mutual-room-regard.trycloudflare.com"
+application_url = "https://vertex-ownership-partially-gradually.trycloudflare.com"
 embedded = true
 
 [build]
@@ -17,9 +17,9 @@ scopes = "write_products"
 
 [auth]
 redirect_urls = [
-  "https://barbara-mutual-room-regard.trycloudflare.com/auth/callback",
-  "https://barbara-mutual-room-regard.trycloudflare.com/auth/shopify/callback",
-  "https://barbara-mutual-room-regard.trycloudflare.com/api/auth/callback"
+  "https://vertex-ownership-partially-gradually.trycloudflare.com/auth/callback",
+  "https://vertex-ownership-partially-gradually.trycloudflare.com/auth/shopify/callback",
+  "https://vertex-ownership-partially-gradually.trycloudflare.com/api/auth/callback"
 ]
 
 [webhooks]

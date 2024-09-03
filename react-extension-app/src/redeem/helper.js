@@ -1,4 +1,4 @@
-import { currencyDollarIcon } from "../common/icon";
+import { currencyDollarIcon, checkIcon } from "../common/icon";
 import "../index.css";
 
 export const listData = [
@@ -10,11 +10,26 @@ export const listData = [
     butText: "Redeem",
   },
   {
-    name: "GET $10 OFF",
-    tips: "200 BON",
+    name: "GET $50 OFF",
+    tips: "200 points",
     icon: [currencyDollarIcon],
     key: 2,
     butText: "Redeem",
+    isCutOpint: true,
+    point: 200,
+    subListdata: [
+      {
+        name: "success",
+        tips: "Use the redemption code to place an order for deduction",
+        code: "EPB01",
+        icon: [checkIcon],
+        key: 1,
+        butText: "Purchase",
+        type: "nav",
+        point: 10,
+        navLink: "/collections/all",
+      },
+    ],
   },
   {
     name: "GET $20 OFF",
@@ -25,7 +40,7 @@ export const listData = [
   },
   {
     name: "Free shipping coupon",
-    tips: "200 BON",
+    tips: "200 points",
     icon: [currencyDollarIcon],
     key: 4,
     butText: "Redeem",
