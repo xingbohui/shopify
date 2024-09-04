@@ -12,7 +12,7 @@ export default function AccountConnectionExample() {
   const buttonText = connected ? "Disconnect" : "Connect";
   const details = connected
     ? "We will provide comprehensive management of your users, including membership levels, membership points, earning points, redeeming points for gifts, membership management, loyalty programs, page decoration, and more."
-    : "Spack";
+    : "welcome ";
   const terms = connected ? null : (
     <p>
       Provide the brand's online store with the ability to expand its membership

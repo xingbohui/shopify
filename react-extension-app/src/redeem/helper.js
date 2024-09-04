@@ -1,4 +1,4 @@
-import { currencyDollarIcon, checkIcon } from "../common/icon";
+import { currencyDollarIcon, yenIcon } from "../common/icon";
 import successImag from "../common/image/success.jpg";
 import failImag from "../common/image/fail.jpg";
 import "../index.css";
@@ -27,9 +27,9 @@ export const listData = [
     ],
   },
   {
-    name: "GET $50 OFF",
+    name: "GET ￥50 OFF",
     tips: "200 points",
-    icon: [currencyDollarIcon],
+    icon: [yenIcon],
     key: 2,
     butText: "Redeem",
     isCutOpint: true,
