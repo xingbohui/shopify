@@ -26,7 +26,7 @@ export const listData = [
     key: 3,
     point: 50,
     butText: "Take me there",
-    type: "nav",
+    type: "open",
     navLink:
       "https://www.facebook.com/login/?next=https%3A%2F%2Fwww.facebook.com%2Fgroups%2F190036098345",
   },

@@ -14,7 +14,7 @@ export const CardInfo = (props) => {
 
   const navToProductPage = (item) => {
     updateOpint(item)
-    item.isCutOpint ? cutPoint(item.point) : addPoint(item.point);
+    // item.isCutOpint ? cutPoint(item.point) : addPoint(item.point);
 
     if (isCustomJump) {
       onCustomJump(item);

@@ -11,7 +11,7 @@ export const Mine = observer(() => {
   const onOption = (item) => {
     setSelectedInfo(!selectedInfo ? item : "");
   };
-
+  console.log(11, points);
   return (
     <div
       className={`p-20 flex flex-col w-screen h-90 themeColorBgViceClass gap-16 `}
