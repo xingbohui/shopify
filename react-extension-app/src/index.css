@@ -16,8 +16,8 @@ code {
     monospace;
 }
 :root {
-  --color-500: theme("colors.teal.500");
-  --color-50: theme("colors.teal.50");
+  --color-500: theme("colors.blue.500");
+  --color-50: theme("colors.blue.50");
   --color-red-500: theme("colors.rose.500");
 
 }

@@ -62,7 +62,7 @@ export const CardInfo = (props) => {
       {item.butText && (
         <button
           onClick={() => navToProductPage(item)}
-          className={`themeColorBgClass py-2 px-6 rounded-full text-white`}
+          className={`themeColorBgClass py-1 px-4 rounded-full text-white`}
         >
           {item.butText}
         </button>

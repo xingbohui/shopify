@@ -34,14 +34,21 @@ export const PartyButton = observer(() => {
   return (
     <div className="fixed right-10 bottom-10 z-10">
       <button is="party-button" onClick={onTrigger}>
-        <span class="visually-hidden">Start the party!</span>
+        <span className="textWhiteClass text-xs	">MOMENT REWARDS</span>
       </button>
       {showQuickEntry && (
-        <div className="bg-cyan-500 shadow-lg overflow-hidden shadow-cyan-500/50 relative flex flex-col justify-between rounded-lg bgWhiteClass">
+        <div className="bgWhiteClass shadow-lg overflow-hidden shadow-blue-500/50 relative flex flex-col justify-between rounded-lg bgWhiteClass">
+          {/* <div className="flex flex-col justify-between rounded-lg"> */}
+          <div className="px-4 items-center h-36 flex flex-row justify-between  bg-center bg-cover bg-[url('https://www.vyung.com/img/crm01.f32b1ecd.jpg')]">
+            <span className="textWhiteClass text-xl font-semibold">
+              WELCOME MOMENT LOYALTY
+            </span>
+          </div>
+
           {/* 未登录 */}
           {!isLogin && (
             <div className="flex flex-col gap-10 w-96 p-10">
-              <p className="text-slate-100">
+              <p className="themeColorTextClass">
                 We are thrilled to be able offer a reward program that shows our
                 customers what they mean to us! Join today to earn points and
                 redeem them at checkout!
@@ -54,82 +61,70 @@ export const PartyButton = observer(() => {
               </button>
             </div>
           )}
-
           {/* 登录后 */}
+
           {isLogin && (
-            <div className="flex flex-col justify-between rounded-lg">
-              <div className="px-4 items-center h-36 flex flex-row justify-between  bg-center bg-cover bg-[url('https://shuyun.com/wp-content/themes/shuyun/statics/dist/img/index/index_yx_solution_hd_item.png')]">
-                <span className="textWhiteClass text-xl font-semibold">
-                  welcome shuyun loyalty
-                </span>
-                <img
-                  className="absolute top-0 -right-20 w-60 h-60"
-                  src="https://shuyun.com/wp-content/uploads/2023/03/2023032009452576.png"
-                  alt=""
-                />
-              </div>
+            <div className="z-10 p-6 rounded-lg bgWhiteClass w-96 -mt-2">
+              {!selectedInfo && (
+                <div className="flex flex-col gap-10">
+                  <div className="flex flex-row gap-1 justify-center">
+                    <span className="text-lg	font-semibold">
+                      Your current points:
+                    </span>
+                    <span
+                      className={`text-lg font-semibold themeColorTextClass`}
+                    >
+                      {points}
+                    </span>
+                  </div>
+                  <div className="flex flex-col gap-3 h-64">
+                    {listData.map((m) => {
+                      return (
+                        <CardListInfo
+                          item={m}
+                          rowKey={m.key}
+                          hgClass="h-20"
+                          onOption={onOption}
+                        />
+                      );
+                    })}
+                  </div>
+                </div>
+              )}
 
-              <div className="z-10 p-6 rounded-lg bgWhiteClass w-96 -mt-2">
-                {!selectedInfo && (
-                  <div className="flex flex-col gap-10">
-                    <div className="flex flex-row gap-1 justify-center">
-                      <span className="text-lg	font-semibold">
-                        Your current points:
-                      </span>
-                      <span
-                        className={`text-lg font-semibold themeColorTextClass`}
-                      >
-                        {points}
-                      </span>
+              {selectedInfo.key && (
+                <div className="flex flex-col gap-10 ">
+                  <div className="relative flex flex-row items-center justify-center">
+                    <div
+                      className="absolute left-1 cursor-pointer"
+                      onClick={onBack}
+                    >
+                      {chevronLeft}
                     </div>
-                    <div className="flex flex-col gap-3 h-64">
-                      {listData.map((m) => {
-                        return (
-                          <CardListInfo
-                            item={m}
-                            rowKey={m.key}
-                            hgClass="h-20"
-                            onOption={onOption}
-                          />
-                        );
-                      })}
+                    <div className="flex flex-row items-center gap-2 font-semibold">
+                      {selectedInfo.icon}
+                      <span>{selectedInfo.name}</span>
                     </div>
                   </div>
-                )}
-
-                {selectedInfo.key && (
-                  <div className="flex flex-col gap-10 ">
-                    <div className="relative flex flex-row items-center justify-center">
-                      <div
-                        className="absolute left-1 cursor-pointer"
-                        onClick={onBack}
-                      >
-                        {chevronLeft}
-                      </div>
-                      <div className="flex flex-row items-center gap-2 font-semibold">
-                        {selectedInfo.icon}
-                        <span>{selectedInfo.name}</span>
-                      </div>
-                    </div>
-                    <div className="flex flex-col gap-3 h-64  overflow-y-scroll">
-                      {subListData.map((m) => {
-                        return (
-                          <CardInfo
-                            item={m}
-                            rowKey={m.key}
-                            isRowClass="flex-row justify-between"
-                            widthClass="w-80"
-                            isHidBorder={true}
-                            updateOpint={updateOpint}
-                          />
-                        );
-                      })}
-                    </div>
+                  <div className="flex flex-col gap-3 h-64  overflow-y-scroll">
+                    {subListData.map((m) => {
+                      return (
+                        <CardInfo
+                          item={m}
+                          rowKey={m.key}
+                          isRowClass="flex-row justify-between"
+                          widthClass="w-80"
+                          isHidBorder={true}
+                          updateOpint={updateOpint}
+                        />
+                      );
+                    })}
                   </div>
-                )}
-              </div>
+                </div>
+              )}
             </div>
           )}
+          {/* </div> */}
         </div>
       )}
     </div>

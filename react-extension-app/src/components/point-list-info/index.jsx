@@ -9,19 +9,23 @@ export const PointListInfo = (props) => {
       }`}
     >
       <div className="flex flex-row items-center w-96 gap-5">
-        <span
-          className={`text-base font-semibold ${
-            item.item === 1 ? "font-semibold" : ""
-          }`}
-        >
+        <span className={`text-base ${item.key === 1 ? "font-semibold" : ""}`}>
           {item.name}
         </span>
-        <span className="text-smtext-slate-400">{item.tips}</span>
+        <span
+          className={`text-smtext-slate-400 ${
+            item.key === 1 ? "font-semibold" : ""
+          }`}
+        >
+          {item.tips}
+        </span>
       </div>
       <span
         className={`text-sm	${
-          item.isCutOpint ? "redColorTextClass" : "themeColorTextClass"
-        }`}
+          item.isCutOpint && item.key !== 1
+            ? "redColorTextClass"
+            : "themeColorTextClass"
+        } ${item.key === 1 ? "font-semibold" : ""}`}
       >
         {item.point}
       </span>

@@ -53,7 +53,7 @@ export default function AccountConnectionExample() {
         >
           <VideoThumbnail
             videoLength={80}
-            thumbnailUrl="https://shuyun.com/wp-content/uploads/2021/10/2021102812311341.png"
+            thumbnailUrl="https://www.vyung.com/img/Loyalty-ability-05.c002ee23.png"
             onClick={() => console.log("clicked")}
           />
         </MediaCard>
@@ -89,8 +89,9 @@ export default function AccountConnectionExample() {
         )}
 
         <img
+        style={{width: '80px'}}
           onClick={() => setIsShowMail(!isShowMail)}
-          src="https://shuyun.com/wp-content/themes/shuyun/statics/dist/img/side_service_bar_cartoon.png"
+          src="https://www.vyung.com/img/choose-04.278c685b.png"
           alt=""
         />
       </div>

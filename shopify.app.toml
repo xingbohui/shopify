@@ -3,7 +3,7 @@
 client_id = "c2ebf6652e743927b799411433d0faa4"
 name = "project-app2"
 handle = "project-app2"
-application_url = "https://ignore-organ-french-paypal.trycloudflare.com"
+application_url = "https://persistent-trout-allocation-peru.trycloudflare.com"
 embedded = true
 
 [build]
@@ -17,9 +17,9 @@ scopes = "write_products"
 
 [auth]
 redirect_urls = [
-  "https://ignore-organ-french-paypal.trycloudflare.com/auth/callback",
-  "https://ignore-organ-french-paypal.trycloudflare.com/auth/shopify/callback",
-  "https://ignore-organ-french-paypal.trycloudflare.com/api/auth/callback"
+  "https://persistent-trout-allocation-peru.trycloudflare.com/auth/callback",
+  "https://persistent-trout-allocation-peru.trycloudflare.com/auth/shopify/callback",
+  "https://persistent-trout-allocation-peru.trycloudflare.com/api/auth/callback"
 ]
 
 [webhooks]

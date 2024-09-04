@@ -3,9 +3,9 @@ import React from "react";
 
 export const Head = () => {
   return (
-    <div className="p-10 flex flex-col justify-center gap-4 w-screen h-80 bg-center bg-cover bg-[url('https://shuyun.com/wp-content/themes/shuyun/statics/dist/img/footer_box.png')]">
+    <div className="p-10 flex flex-col justify-center gap-4 w-screen h-80 bg-center bg-cover bg-[url('https://www.vyung.com/img/header-background-img.102faa4e.png')]">
       <span className="font-sans font-semibold text-white text-xl">
-        ShuYun Loyalty
+        MOMENT LOYALTY
       </span>
       <p className="text-slate-100 w-96">
         Become a member of our loyalty program and gain access to exclusive
