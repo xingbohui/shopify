@@ -15,6 +15,7 @@ module.exports = {
         referral: "./src/referral/index.jsx",
         vipTiers: "./src/vip-tiers/index.jsx",
         footer: "./src/footer/index.jsx",
+        partyBut: "./src/party-button/index.jsx",
       }
     : {
         index: "./src/index.js",

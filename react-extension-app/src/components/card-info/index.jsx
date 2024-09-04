@@ -56,7 +56,7 @@ export const CardInfo = (props) => {
           {item.code && (
             <span className="themeColorTextClass">{item.code}</span>
           )}
-          {item.tips && <span className="text-slate-400">{item.tips}</span>}
+          {item.tips && <span className="text-slate-400 text-sm">{item.tips}</span>}
         </div>
       </div>
       {item.butText && (

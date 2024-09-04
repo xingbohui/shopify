@@ -6,7 +6,7 @@ import "../index.css";
 export const listData = [
   {
     name: "Free product",
-    tips: "Earn 10000 points",
+    tips: "10000 points",
     icon: [currencyDollarIcon],
     isLackPoint: true,
     key: 1,
@@ -28,7 +28,7 @@ export const listData = [
   },
   {
     name: "GET $50 OFF",
-    tips: "Earn 200 points",
+    tips: "200 points",
     icon: [currencyDollarIcon],
     key: 2,
     butText: "Redeem",
@@ -51,16 +51,18 @@ export const listData = [
   },
   {
     name: "GET $20 OFF",
-    tips: "Earn 10 points",
+    tips: "10 points",
     icon: [currencyDollarIcon],
     key: 3,
+    disable: true,
     butText: "Redeem",
   },
   {
     name: "Free shipping coupon",
-    tips: "Earn 200 points",
+    tips: "200 points",
     icon: [currencyDollarIcon],
     key: 4,
+    disable: true,
     butText: "Redeem",
   },
 ];

@@ -8,9 +8,12 @@ export const Redeem = () => {
   const [selectedOptionInfo, setSelectedOptionInfo] = useState([]);
   const { updateOpint } = commonStore;
   const onCustomJump = (item) => {
+    if (item.disable) {
+      return;
+    }
     selectedOptionInfo.push(item);
     setSelectedOptionInfo(Object.assign([], selectedOptionInfo));
-
+    // 积分不足
     if (item.isLackPoint) {
       setTimeout(() => {
         selectedOptionInfo.splice(
@@ -35,7 +38,7 @@ export const Redeem = () => {
             <div key={m.key} className="h-52">
               {selectedOptionInfo?.some((s) => s.key === m.key) ? (
                 m.subListdata?.map((s) => {
-                  return <CardInfo item={s} />;
+                  return <CardInfo item={s} updateOpint={updateOpint} />;
                 })
               ) : (
                 <CardInfo item={m} isCustomJump onCustomJump={onCustomJump} />
