@@ -1,5 +1,10 @@
 import React, { useState, useCallback } from "react";
-import { MediaCard, ChoiceList, EmptyState } from "@shopify/polaris";
+import {
+  MediaCard,
+  ChoiceList,
+  EmptyState,
+  VideoThumbnail,
+} from "@shopify/polaris";
 
 export default function MediaCardExample() {
   const [active, setActive] = useState(false);
@@ -9,6 +14,7 @@ export default function MediaCardExample() {
   const listData = [
     {
       key: 1,
+      videoProgress: 45,
       title: "Earn points",
       description:
         "Set up how your customers can earn points when they interact with your brand",
@@ -17,6 +23,7 @@ export default function MediaCardExample() {
     },
     {
       key: 2,
+      videoProgress: 2,
       title: "Redeem points",
       description:
         "Set up how your customers can get rewards in exchange for points",
@@ -25,6 +32,7 @@ export default function MediaCardExample() {
     },
     {
       key: 3,
+      videoProgress: 89,
       title: "Referral program",
       description:
         "Broaden your clientele and elevate the awareness of your brand.",
@@ -33,6 +41,7 @@ export default function MediaCardExample() {
     },
     {
       key: 4,
+      videoProgress: 0,
       title: "VIP Tiers",
       description: "Offer exclusive rewards for your most loyal customers",
       image:
@@ -101,26 +110,13 @@ export default function MediaCardExample() {
                     },
                   ]}
                 >
-                  <div
-                    style={{
-                      height: "100%",
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                    }}
-                  >
-                    <img
-                      alt=""
-                      width="80%"
-                      height="60%"
-                      style={{
-                        textAlign: "center",
-                        objectFit: "cover",
-                        objectPosition: "center",
-                      }}
-                      src={item.image}
-                    />
-                  </div>
+                  <VideoThumbnail
+                    videoLength={80}
+                    videoProgress={item.videoProgress}
+                    showVideoProgress
+                    thumbnailUrl={item.image}
+                    onClick={() => console.log("clicked")}
+                  />
                 </MediaCard>
               </div>
             );
