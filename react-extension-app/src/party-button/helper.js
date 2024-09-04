@@ -28,7 +28,6 @@ export const subListData = [
   {
     name: "Complete an order",
     tips: "Earn 10 points",
-  
     key: 1,
     butText: "Purchase",
     type: "nav",
@@ -37,30 +36,31 @@ export const subListData = [
   },
   {
     name: "Happy birthday",
-    tips: "200 points",
+    tips: "Earn 200 points",
     key: 2,
     point: 200,
     butText: "Enter info",
   },
   {
     name: "Share on Facebook",
-    tips: "50 points",
+    tips: "Earn 50 points",
     key: 3,
     butText: "Take there",
     type: "open",
+    point: 50,
     navLink:
       "https://www.facebook.com/login/?next=https%3A%2F%2Fwww.facebook.com%2Fgroups%2F190036098345",
   },
   {
     name: "Happy birthday",
-    tips: "200 points",
+    tips: "Earn 200 points",
     key: 4,
     point: 200,
     butText: "Enter info",
   },
   {
     name: "Complete an order",
-    tips: "Earn 10 points",
+    tips: "Earn Earn 10 points",
     key: 5,
     butText: "Purchase",
   },
@@ -78,7 +78,7 @@ export const subListData = [
   },
   {
     name: "Happy birthday",
-    tips: "200 points",
+    tips: "Earn 200 points",
     key: 8,
     butText: "Enter info",
   },

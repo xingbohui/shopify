@@ -1,5 +1,4 @@
 import React from "react";
-import { addPoint, cutPoint } from "../../common/helper";
 
 export const CardInfo = (props) => {
   const {
@@ -9,17 +8,15 @@ export const CardInfo = (props) => {
     widthClass,
     isHidBorder,
     onCustomJump,
-    updateOpint
+    updateOpint,
   } = props;
 
   const navToProductPage = (item) => {
-    updateOpint(item)
-    // item.isCutOpint ? cutPoint(item.point) : addPoint(item.point);
-
     if (isCustomJump) {
       onCustomJump(item);
       return;
     }
+    updateOpint(item);
 
     if (item.type === "open") {
       return window.open(item.navLink);
@@ -33,7 +30,7 @@ export const CardInfo = (props) => {
         widthClass ? widthClass : "w-60"
       } ${isHidBorder ? "" : "border"} ${
         isRowClass ? isRowClass : "flex-col"
-      } flex h-52 gap-2 items-center rounded-lg px-3 py-5 border-slate-200`}
+      } flex h-full  gap-2 items-center rounded-lg px-3 py-5 border-slate-200`}
     >
       {item.rgTpText && (
         <div
@@ -44,6 +41,8 @@ export const CardInfo = (props) => {
       )}
 
       <div className={`flex flex-col items-center`}>
+        {item.image && <img className="w-8" src={item.image} alt="" />}
+
         {item.icon?.length > 0 && (
           <div className="flex flex-row">{item.icon?.map((m) => m)}</div>
         )}

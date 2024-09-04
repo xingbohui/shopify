@@ -2,3 +2,4 @@ packages:
  - 'extensions/*'
  - 'web'
  - 'web/frontend'
+ - 'react-extension-app'

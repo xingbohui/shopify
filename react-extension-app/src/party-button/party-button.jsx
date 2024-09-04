@@ -1,13 +1,16 @@
 import React, { useState } from "react";
+import { observer } from "mobx-react";
 import "./index.css";
 import { listData, subListData } from "./helper";
 import { CardListInfo } from "../components/card-list-info";
 import { CardInfo } from "../components/card-info";
 import { chevronLeft } from "../common/icon";
+import { commonStore } from "../store";
 
-export const PartyButton = () => {
+export const PartyButton = observer(() => {
   const [showQuickEntry, setShopQuickEntry] = useState(false);
   const [selectedInfo, setSelectedInfo] = useState("");
+  const { points, updateOpint } = commonStore;
 
   const isLogin = window.localStorage.getItem("isLogin");
   const onTrigger = () => {
@@ -24,6 +27,7 @@ export const PartyButton = () => {
 
   const onLogin = () => {
     window.localStorage.setItem("isLogin", true);
+    window.localStorage.setItem("currPoint", 1000);
     window.location.href = "https://shopify.com/66867757220/account";
   };
 
@@ -75,7 +79,7 @@ export const PartyButton = () => {
                       <span
                         className={`text-lg font-semibold themeColorTextClass`}
                       >
-                        {window.localStorage.getItem("currPoint") || 1000}
+                        {points}
                       </span>
                     </div>
                     <div className="flex flex-col gap-3 h-64">
@@ -116,6 +120,7 @@ export const PartyButton = () => {
                             isRowClass="flex-row justify-between"
                             widthClass="w-80"
                             isHidBorder={true}
+                            updateOpint={updateOpint}
                           />
                         );
                       })}
@@ -129,4 +134,4 @@ export const PartyButton = () => {
       )}
     </div>
   );
-};
+});

@@ -3,21 +3,21 @@ import { starIcon } from "../common/icon";
 export const listData = [
   {
     name: "Entry",
-    tips: "Earn 0 points",
+    tips: "0 points",
     icon: [starIcon],
     key: 1,
     widthClass: "w-80",
   },
   {
     name: "bon test",
-    tips: "Earn 20 points",
+    tips: "20 points",
     icon: [starIcon, starIcon],
     key: 2,
     widthClass: "w-80",
   },
   {
     name: "Silver",
-    tips: "Earn 1000 points",
+    tips: "1000 points",
     icon: [starIcon, starIcon, starIcon],
     key: 3,
     widthClass: "w-80",
@@ -25,7 +25,7 @@ export const listData = [
   },
   {
     name: "Gold",
-    tips: "Earn 2000 points",
+    tips: "2000 points",
     icon: [starIcon, starIcon, starIcon, starIcon],
     key: 4,
     widthClass: "w-80",

@@ -18,6 +18,8 @@ code {
 :root {
   --color-500: theme("colors.teal.500");
   --color-50: theme("colors.teal.50");
+  --color-red-500: theme("colors.rose.500");
+
 }
 
 .themeColorBgClass {
@@ -35,6 +37,9 @@ code {
 }
 .themeColorTextClass {
   color: var(--color-500);
+}
+.redColorTextClass {
+  color: var(--color-red-500);
 }
 
 .themeColorBorderClass {

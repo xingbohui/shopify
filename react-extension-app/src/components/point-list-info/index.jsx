@@ -1,14 +1,30 @@
 import React from "react";
 
 export const PointListInfo = (props) => {
-  const { data } = props;
+  const { item } = props;
   return (
-    <div className="flex flex-row justify-between items-center">
-      <div className="flex flex-row items-center w-40 gap-4">
-        <span className="text-3xl	font-semibold">{data.title}</span>
-        <span className="text-slate-400">{data.tips}</span>
+    <div
+      className={`flex flex-row p-4 justify-between border-b border-slate-200 items-center ${
+        item.key === 1 ? "bg-slate-200" : ""
+      }`}
+    >
+      <div className="flex flex-row items-center w-96 gap-5">
+        <span
+          className={`text-base font-semibold ${
+            item.item === 1 ? "font-semibold" : ""
+          }`}
+        >
+          {item.name}
+        </span>
+        <span className="text-smtext-slate-400">{item.tips}</span>
       </div>
-      <span className={`${data.isNegative}`}>{data.val}</span>
+      <span
+        className={`text-sm	${
+          item.isCutOpint ? "redColorTextClass" : "themeColorTextClass"
+        }`}
+      >
+        {item.point}
+      </span>
     </div>
   );
 };

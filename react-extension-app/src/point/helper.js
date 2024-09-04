@@ -3,7 +3,7 @@ import { giftIcon, sparklesIcon, shareIcon } from "../common/icon";
 export const listData = [
   {
     name: "Complete an order",
-    tips: "Earn 10 points for every 1USD",
+    tips: "Earn 10 points",
     icon: [giftIcon],
     key: 1,
     butText: "Purchase",
@@ -13,7 +13,7 @@ export const listData = [
   },
   {
     name: "Happy birthday",
-    tips: "200 points",
+    tips: "Earn 200 points",
     icon: [sparklesIcon],
     key: 2,
     point: 200,
@@ -21,7 +21,7 @@ export const listData = [
   },
   {
     name: "Share on Facebook",
-    tips: "50 points",
+    tips: "Earn 50 points",
     icon: [shareIcon],
     key: 3,
     point: 50,
@@ -32,7 +32,7 @@ export const listData = [
   },
   {
     name: "Happy birthday",
-    tips: "200 points",
+    tips: "Earn 200 points",
     icon: [giftIcon],
     key: 4,
     point: 200,
@@ -40,7 +40,7 @@ export const listData = [
   },
   {
     name: "Complete an order",
-    tips: "Earn 10 points for every 1USD",
+    tips: "Earn 10 points",
     icon: [giftIcon],
     key: 5,
     butText: "Purchase",
@@ -54,14 +54,14 @@ export const listData = [
   },
   {
     name: "Complete an order",
-    tips: "Earn 10 points for every 1USD",
+    tips: "Earn 10 points",
     icon: [giftIcon],
     key: 7,
     butText: "Purchase",
   },
   {
     name: "Happy birthday",
-    tips: "200 points",
+    tips: "Earn 200 points",
     icon: [sparklesIcon],
     key: 8,
     butText: "Enter info",

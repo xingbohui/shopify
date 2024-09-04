@@ -4,15 +4,17 @@ class Store {
   constructor() {
     makeAutoObservable(this);
   }
-  points = 0;
+  points = window.localStorage.getItem("currPoint") || 0;
 
   //  =====================事件=====================
   updateOpint = (item) => {
-    this.points = item.isCutOpint
-      ? this.points + item.point
-      : this.points - item.point;
-    console.log(12, this.points);
-    // window.localStorage.setItem("currPoint", this.points);
+    if (Math.abs(item.point) > 0) {
+      this.points = item.isCutOpint
+        ? Number(this.points) - Number(item.point)
+        : Number(this.points) + Number(item.point);
+
+      window.localStorage.setItem("currPoint", this.points);
+    }
   };
 }
 
