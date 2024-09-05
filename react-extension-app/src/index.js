@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { Head } from "./head/head";
+// import { Head } from "./head/head";
 import { Mine } from "./mine/mine";
 import { Point } from "./point/point";
 import { Redeem } from "./redeem/redeem";
@@ -14,7 +14,7 @@ const root = ReactDOM.createRoot(document.getElementById("moment"));
 root.render(
   <React.StrictMode>
     {/* <PartyButton /> */}
-    <Head />
+    {/* <Head /> */}
     <Mine />
     <Point />
     <Redeem />

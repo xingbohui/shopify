@@ -33,7 +33,7 @@ export default function AccountConnectionExample() {
       <AccountConnection
         accountName={accountName}
         connected={connected}
-        title="ShuYun Loyalty"
+        title="Moment Loyalty"
         action={{
           content: buttonText,
           onAction: handleAction,
