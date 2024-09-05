@@ -6,20 +6,20 @@ import { Point } from "./point/point";
 import { Redeem } from "./redeem/redeem";
 import { Referral } from "./referral/referral";
 import { VIPTiers } from "./vip-tiers/vip-tiers";
-import { Footer } from "./footer/footer";
-import { PartyButton } from "./party-button/party-button";
+// import { Footer } from "./footer/footer";
+// import { PartyButton } from "./party-button/party-button";
 import "./index.css";
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
+const root = ReactDOM.createRoot(document.getElementById("moment"));
 root.render(
   <React.StrictMode>
-    <PartyButton />
+    {/* <PartyButton /> */}
     <Head />
     <Mine />
     <Point />
     <Redeem />
     <Referral />
     <VIPTiers />
-    <Footer />
+    {/* <Footer /> */}
   </React.StrictMode>
 );

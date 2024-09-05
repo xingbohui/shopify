@@ -8,14 +8,15 @@ const isProduction = process.env.NODE_ENV === "production";
 module.exports = {
   entry: isProduction
     ? {
-        head: "./src/head/index.jsx",
-        mine: "./src/mine/index.jsx",
-        point: "./src/point/index.jsx",
-        redeem: "./src/redeem/index.jsx",
-        referral: "./src/referral/index.jsx",
-        vipTiers: "./src/vip-tiers/index.jsx",
-        footer: "./src/footer/index.jsx",
-        partyBut: "./src/party-button/index.jsx",
+        // head: "./src/head/index.jsx",
+        // mine: "./src/mine/index.jsx",
+        // point: "./src/point/index.jsx",
+        // redeem: "./src/redeem/index.jsx",
+        // referral: "./src/referral/index.jsx",
+        // vipTiers: "./src/vip-tiers/index.jsx",
+        // footer: "./src/footer/index.jsx",
+        // partyBut: "./src/party-button/index.jsx",
+        moment: "./src/index.js",
       }
     : {
         index: "./src/index.js",
