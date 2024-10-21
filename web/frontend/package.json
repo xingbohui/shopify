@@ -4,8 +4,8 @@
   "private": true,
   "license": "UNLICENSED",
   "scripts": {
-    "build": "vite build",
-    "dev": "vite",
+    "build": "SHOPIFY_API_KEY=c2ebf6652e743927b799411433d0faa4 vite build",
+    "dev": "SHOPIFY_API_KEY=c2ebf6652e743927b799411433d0faa4 vite",
     "coverage": "vitest run --coverage"
   },
   "type": "module",
