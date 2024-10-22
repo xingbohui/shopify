@@ -1,0 +1,23 @@
+# Learn more about configuring your app at https://www.angong.ink/docs/apps/tools/cli/configuration
+
+client_id = "5f9cf185c0eb9b9676af12976a3cc498"
+name = "project-app-1022"
+handle = "project-app-1022"
+application_url = "https://www.angong.ink/huijie/index.html"
+embedded = true
+
+[build]
+include_config_on_deploy = true
+
+[access_scopes]
+# Learn more at https://www.angong.ink/huijie/apps/tools/cli/configuration#access_scopes
+scopes = ""
+
+[auth]
+redirect_urls = [ "https://www.angong.ink/huijie/auth/callback" ]
+
+[webhooks]
+api_version = "2024-10"
+
+[pos]
+embedded = false
